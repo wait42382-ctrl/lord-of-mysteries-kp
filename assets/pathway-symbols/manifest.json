@@ -1,0 +1,535 @@
+{
+  "version": 1,
+  "extraction": "source-pixel-threshold-to-vector-and-points",
+  "sourceDirectory": "维护者提供的原始素材",
+  "symbols": [
+    {
+      "key": "fool",
+      "name": "占卜家",
+      "original": "assets/pathway-symbols/originals/fool-占卜家.jpg",
+      "contour": "assets/pathway-symbols/contours/fool.svg",
+      "sourceFilename": "45FCE87E029318A29F2D9E2EA98628CF.jpg",
+      "sourceSha256": "2ee232bbb0c1675f0764cb307654baaa289fae8888feb4ef56d4c625f65571c4",
+      "originalSize": [
+        800,
+        1354
+      ],
+      "sourceBounds": [
+        0.181640625,
+        0.2537485582468281,
+        0.818359375,
+        0.6389850057670127
+      ],
+      "contourSize": [
+        326,
+        334
+      ],
+      "pointCount": 7700,
+      "components": 8
+    },
+    {
+      "key": "door",
+      "name": "学徒",
+      "original": "assets/pathway-symbols/originals/door-学徒.jpg",
+      "contour": "assets/pathway-symbols/contours/door.svg",
+      "sourceFilename": "09BA5BBF4FF7FF45135426F89D7E288A.jpg",
+      "sourceSha256": "9b4cfe035257895bb7f244472cfd821bf509f6996817bd8749d0109b8b2c7e21",
+      "originalSize": [
+        1078,
+        2068
+      ],
+      "sourceBounds": [
+        0.255859375,
+        0.28411405295315684,
+        0.744140625,
+        0.5743380855397149
+      ],
+      "contourSize": [
+        250,
+        285
+      ],
+      "pointCount": 7700,
+      "components": 7
+    },
+    {
+      "key": "error",
+      "name": "偷盗者",
+      "original": "assets/pathway-symbols/originals/error-偷盗者.jpg",
+      "contour": "assets/pathway-symbols/contours/error.svg",
+      "sourceFilename": "E97AD2845BF78F1497395655D51BD5F1.jpg",
+      "sourceSha256": "297ad13f8771773e16fbcc9312d828f3c322cfe815068decdafc8a749e258a3f",
+      "originalSize": [
+        1079,
+        2061
+      ],
+      "sourceBounds": [
+        0.193359375,
+        0.2607361963190184,
+        0.796875,
+        0.5777096114519428
+      ],
+      "contourSize": [
+        309,
+        310
+      ],
+      "pointCount": 7700,
+      "components": 12
+    },
+    {
+      "key": "sun",
+      "name": "歌颂者",
+      "original": "assets/pathway-symbols/originals/sun-歌颂者.jpg",
+      "contour": "assets/pathway-symbols/contours/sun.svg",
+      "sourceFilename": "0A7F5F5503B0E8D89EDAA89C11D1EA96.jpg",
+      "sourceSha256": "289270ca3cff54c5d4eb8e096fec51d9089c31b500fd87eb486acb81576d93f8",
+      "originalSize": [
+        1078,
+        2068
+      ],
+      "sourceBounds": [
+        0.203125,
+        0.24134419551934827,
+        0.798828125,
+        0.5661914460285132
+      ],
+      "contourSize": [
+        305,
+        319
+      ],
+      "pointCount": 7700,
+      "components": 6
+    },
+    {
+      "key": "tyrant",
+      "name": "水手",
+      "original": "assets/pathway-symbols/originals/tyrant-水手.jpg",
+      "contour": "assets/pathway-symbols/contours/tyrant.svg",
+      "sourceFilename": "DBA1EA3F1231DA33EE098C8A8EB3A63D.jpg",
+      "sourceSha256": "b79d1e6630165621b48a3a935d4b523044c473934d23abdfb2d08c0ed7523063",
+      "originalSize": [
+        1079,
+        2068
+      ],
+      "sourceBounds": [
+        0.203125,
+        0.2640163098878695,
+        0.798828125,
+        0.5983690112130479
+      ],
+      "contourSize": [
+        305,
+        328
+      ],
+      "pointCount": 7700,
+      "components": 21
+    },
+    {
+      "key": "visionary",
+      "name": "观众",
+      "original": "assets/pathway-symbols/originals/visionary-观众.jpg",
+      "contour": "assets/pathway-symbols/contours/visionary.svg",
+      "sourceFilename": "B0E55A9FB82F0AE5C671BDE4A23C99B7.jpg",
+      "sourceSha256": "b86303ac292d0aaf5f86a8f2cee8afa237796f184ae49fef200bdaa1fe3f31ef",
+      "originalSize": [
+        1076,
+        2034
+      ],
+      "sourceBounds": [
+        0.17578125,
+        0.256198347107438,
+        0.841796875,
+        0.5929752066115702
+      ],
+      "contourSize": [
+        341,
+        326
+      ],
+      "pointCount": 7700,
+      "components": 14
+    },
+    {
+      "key": "white-tower",
+      "name": "阅读者",
+      "original": "assets/pathway-symbols/originals/white-tower-阅读者.jpg",
+      "contour": "assets/pathway-symbols/contours/white-tower.svg",
+      "sourceFilename": "C7E53C7C30DED6FFFD874C4142986D95.jpg",
+      "sourceSha256": "a37f244f31d18fc89e92d82d0b51b36e7814fa9531b2e6f326991184768b6488",
+      "originalSize": [
+        1077,
+        2048
+      ],
+      "sourceBounds": [
+        0.25390625,
+        0.28336755646817247,
+        0.755859375,
+        0.582135523613963
+      ],
+      "contourSize": [
+        257,
+        291
+      ],
+      "pointCount": 7700,
+      "components": 15
+    },
+    {
+      "key": "abyss",
+      "name": "罪犯",
+      "original": "assets/pathway-symbols/originals/abyss-罪犯.jpg",
+      "contour": "assets/pathway-symbols/contours/abyss.svg",
+      "sourceFilename": "E82375F906DEEB35F91612EB4A2CBBE6.jpg",
+      "sourceSha256": "6e7780c50aaa6be0606e13ad6ac6121a7b00d9ffac3ea35e5211ac59433e0f83",
+      "originalSize": [
+        1075,
+        2046
+      ],
+      "sourceBounds": [
+        0.1796875,
+        0.3264887063655031,
+        0.822265625,
+        0.6098562628336756
+      ],
+      "contourSize": [
+        329,
+        276
+      ],
+      "pointCount": 7700,
+      "components": 31
+    },
+    {
+      "key": "chained",
+      "name": "囚犯",
+      "original": "assets/pathway-symbols/originals/chained-囚犯.jpg",
+      "contour": "assets/pathway-symbols/contours/chained.svg",
+      "sourceFilename": "F302E24CFCB58D91F6BC264599E8AF3A.jpg",
+      "sourceSha256": "cfdd4d17d75a075e6a1e4f1d4b211098bcfac397ba1d9238e9ddb9e9acaf72e4",
+      "originalSize": [
+        1079,
+        2070
+      ],
+      "sourceBounds": [
+        0.193359375,
+        0.26171079429735233,
+        0.806640625,
+        0.5906313645621182
+      ],
+      "contourSize": [
+        314,
+        323
+      ],
+      "pointCount": 7700,
+      "components": 19
+    },
+    {
+      "key": "hanged-man",
+      "name": "秘祈人",
+      "original": "assets/pathway-symbols/originals/hanged-man-秘祈人.jpg",
+      "contour": "assets/pathway-symbols/contours/hanged-man.svg",
+      "sourceFilename": "A572D4BFC0C49DEF34A1F0D29E7E6072.jpg",
+      "sourceSha256": "34d5fd1826319f7cbf412dffacd69457a10c42e816b70b7dc95f19063162a1f3",
+      "originalSize": [
+        1079,
+        2032
+      ],
+      "sourceBounds": [
+        0.208984375,
+        0.23651452282157676,
+        0.796875,
+        0.5933609958506224
+      ],
+      "contourSize": [
+        301,
+        344
+      ],
+      "pointCount": 7700,
+      "components": 15
+    },
+    {
+      "key": "darkness",
+      "name": "不眠者",
+      "original": "assets/pathway-symbols/originals/darkness-不眠者.jpg",
+      "contour": "assets/pathway-symbols/contours/darkness.svg",
+      "sourceFilename": "A2FABC87ED1380AED26E689C5D30888A.jpg",
+      "sourceSha256": "47d1f5540f0944e14777ba464598d00c107a9e7928870a6f7c452df562f18457",
+      "originalSize": [
+        1078,
+        2055
+      ],
+      "sourceBounds": [
+        0.189453125,
+        0.23258196721311475,
+        0.8359375,
+        0.5717213114754098
+      ],
+      "contourSize": [
+        331,
+        331
+      ],
+      "pointCount": 7700,
+      "components": 6
+    },
+    {
+      "key": "death",
+      "name": "收尸人",
+      "original": "assets/pathway-symbols/originals/death-收尸人.jpg",
+      "contour": "assets/pathway-symbols/contours/death.svg",
+      "sourceFilename": "9E0818812B8921306A0CD7724F40F1EF.jpg",
+      "sourceSha256": "515798964e4960d406a2c7b02ceb6bd93a98983ea565a63094847625f8a29ffb",
+      "originalSize": [
+        1079,
+        2071
+      ],
+      "sourceBounds": [
+        0.16015625,
+        0.26754832146490337,
+        0.83984375,
+        0.5890132248219736
+      ],
+      "contourSize": [
+        348,
+        316
+      ],
+      "pointCount": 7700,
+      "components": 5
+    },
+    {
+      "key": "twilight-giant",
+      "name": "战士",
+      "original": "assets/pathway-symbols/originals/twilight-giant-战士.jpg",
+      "contour": "assets/pathway-symbols/contours/twilight-giant.svg",
+      "sourceFilename": "54378E511C352300BEAB55CC2A316977.jpg",
+      "sourceSha256": "68a342abef07f605cd382202d3dd54b268a477697d9a81d337e00a7b5764a103",
+      "originalSize": [
+        1078,
+        2061
+      ],
+      "sourceBounds": [
+        0.203125,
+        0.254341164453524,
+        0.798828125,
+        0.5832482124616956
+      ],
+      "contourSize": [
+        305,
+        322
+      ],
+      "pointCount": 7700,
+      "components": 20
+    },
+    {
+      "key": "demoness",
+      "name": "刺客",
+      "original": "assets/pathway-symbols/originals/demoness-刺客.jpg",
+      "contour": "assets/pathway-symbols/contours/demoness.svg",
+      "sourceFilename": "CC607015BC345ED758252BC95B4B1879.jpg",
+      "sourceSha256": "02c37b9c85f014d0d565cec2e59ae27ee649df921075a2d81418b893db636886",
+      "originalSize": [
+        1079,
+        2061
+      ],
+      "sourceBounds": [
+        0.251953125,
+        0.2934560327198364,
+        0.73828125,
+        0.5797546012269938
+      ],
+      "contourSize": [
+        249,
+        280
+      ],
+      "pointCount": 7700,
+      "components": 6
+    },
+    {
+      "key": "red-priest",
+      "name": "猎人",
+      "original": "assets/pathway-symbols/originals/red-priest-猎人.jpg",
+      "contour": "assets/pathway-symbols/contours/red-priest.svg",
+      "sourceFilename": "15526BBD581F6EDFF8F5C659BD2552D8.jpg",
+      "sourceSha256": "1ae5fe72c268bfc704a46200c352afd8c3bb6208e2f46824257bd5578fe434b3",
+      "originalSize": [
+        1074,
+        2042
+      ],
+      "sourceBounds": [
+        0.216796875,
+        0.2908530318602261,
+        0.78515625,
+        0.6156217882836588
+      ],
+      "contourSize": [
+        291,
+        316
+      ],
+      "pointCount": 7700,
+      "components": 7
+    },
+    {
+      "key": "mother",
+      "name": "耕种者",
+      "original": "assets/pathway-symbols/originals/mother-耕种者.jpg",
+      "contour": "assets/pathway-symbols/contours/mother.svg",
+      "sourceFilename": "f0cd5c62f398d8c0226fda3d1bf50e47.jpg",
+      "sourceSha256": "792c2fdd80b6467f3c2d774cc24b17dfa25ae93e6e4bf297a5db13dfc085c62c",
+      "originalSize": [
+        1079,
+        2068
+      ],
+      "sourceBounds": [
+        0.228515625,
+        0.2691131498470948,
+        0.78515625,
+        0.5953109072375128
+      ],
+      "contourSize": [
+        285,
+        320
+      ],
+      "pointCount": 7700,
+      "components": 22
+    },
+    {
+      "key": "moon",
+      "name": "药师",
+      "original": "assets/pathway-symbols/originals/moon-药师.jpg",
+      "contour": "assets/pathway-symbols/contours/moon.svg",
+      "sourceFilename": "7FE4F4CEAF2C87090FE2169C5AE11E3F.jpg",
+      "sourceSha256": "fac1310728d9c22901964faccf703334bef3248173161cde414b3fbc0e5a4cb2",
+      "originalSize": [
+        1078,
+        2053
+      ],
+      "sourceBounds": [
+        0.212890625,
+        0.28923076923076924,
+        0.794921875,
+        0.6317948717948718
+      ],
+      "contourSize": [
+        298,
+        334
+      ],
+      "pointCount": 7700,
+      "components": 16
+    },
+    {
+      "key": "justiciar",
+      "name": "仲裁人",
+      "original": "assets/pathway-symbols/originals/justiciar-仲裁人.jpg",
+      "contour": "assets/pathway-symbols/contours/justiciar.svg",
+      "sourceFilename": "A3605CE95FC0EB6AF73D7C3B3120D409.jpg",
+      "sourceSha256": "dcbbfa204181635b7d0c73fe24f7b65756efc29e1dd0ba91c44650e24b33c14c",
+      "originalSize": [
+        1079,
+        2063
+      ],
+      "sourceBounds": [
+        0.21484375,
+        0.2522982635342186,
+        0.78125,
+        0.585291113381001
+      ],
+      "contourSize": [
+        290,
+        326
+      ],
+      "pointCount": 7700,
+      "components": 4
+    },
+    {
+      "key": "black-emperor",
+      "name": "律师",
+      "original": "assets/pathway-symbols/originals/black-emperor-律师.jpg",
+      "contour": "assets/pathway-symbols/contours/black-emperor.svg",
+      "sourceFilename": "882E7A781F2BEC0904762A07F318DFE1.jpg",
+      "sourceSha256": "e3650835544da07156c74d57d5378c1d17bf9d1af7fc5a67da4ea74ea784c878",
+      "originalSize": [
+        1075,
+        2047
+      ],
+      "sourceBounds": [
+        0.17578125,
+        0.24923076923076923,
+        0.82421875,
+        0.5938461538461538
+      ],
+      "contourSize": [
+        332,
+        336
+      ],
+      "pointCount": 7700,
+      "components": 13
+    },
+    {
+      "key": "paragon",
+      "name": "通识者",
+      "original": "assets/pathway-symbols/originals/paragon-通识者.jpg",
+      "contour": "assets/pathway-symbols/contours/paragon.svg",
+      "sourceFilename": "06CA1F5349181C64A1EDB808185184AF.jpg",
+      "sourceSha256": "f0691b2f819b5fe3c266b16d78cf32bb8f42c6a7aaae60da107a20545b8b62f7",
+      "originalSize": [
+        1079,
+        2070
+      ],
+      "sourceBounds": [
+        0.216796875,
+        0.31262729124236255,
+        0.779296875,
+        0.5651731160896131
+      ],
+      "contourSize": [
+        288,
+        248
+      ],
+      "pointCount": 7700,
+      "components": 7
+    },
+    {
+      "key": "hermit",
+      "name": "窥秘人",
+      "original": "assets/pathway-symbols/originals/hermit-窥秘人.jpg",
+      "contour": "assets/pathway-symbols/contours/hermit.svg",
+      "sourceFilename": "0FED8E75E8CF41A8EC154D098C826F3B.jpg",
+      "sourceSha256": "91c55a7d185bc60dc91337c207c4730f4ef58468963df4f299240ccc19b2bbf0",
+      "originalSize": [
+        1075,
+        2063
+      ],
+      "sourceBounds": [
+        0.197265625,
+        0.25127161749745675,
+        0.8125,
+        0.624618514750763
+      ],
+      "contourSize": [
+        315,
+        367
+      ],
+      "pointCount": 7700,
+      "components": 32
+    },
+    {
+      "key": "wheel-of-fortune",
+      "name": "怪物",
+      "original": "assets/pathway-symbols/originals/wheel-of-fortune-怪物.jpg",
+      "contour": "assets/pathway-symbols/contours/wheel-of-fortune.svg",
+      "sourceFilename": "4D6DE1E50971AE407EA9F8542AC2D4BF.jpg",
+      "sourceSha256": "ba7a2a342471edb1bd30ebe0285e2da67373658af869adb6570c15f9d89e9208",
+      "originalSize": [
+        1079,
+        2064
+      ],
+      "sourceBounds": [
+        0.2265625,
+        0.2522982635342186,
+        0.7734375,
+        0.5812053115423902
+      ],
+      "contourSize": [
+        280,
+        322
+      ],
+      "pointCount": 7700,
+      "components": 17
+    }
+  ]
+}
