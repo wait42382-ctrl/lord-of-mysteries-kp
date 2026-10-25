@@ -2,6 +2,7 @@
   'use strict';
   const c = window.CHARACTER_TEMPLATE;
   if (!c) return;
+  document.querySelector('.pathway-link').href = 'sequences.html#' + c.pathway.key;
   const baseTotal = Object.values(c.baseAttributes).reduce((n, v) => n + v, 0);
   const currentTotal = Object.values(c.attributes).reduce((n, v) => n + v, 0);
   const b = c.inspirationBreakdown;

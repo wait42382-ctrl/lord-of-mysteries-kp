@@ -1,10 +1,10 @@
 # 角色卡数值模板 · 安魂师与普通人对照
 
-2026-10-11。入口为 `character.html`，KP 台顶栏提供「角色卡模板」。当前显示黑暗途径序列 6「安魂师」，保留普通 CoC 基线作为对照，背景不填写。
+入口为 `character.html`，可从档案目录中的安魂师模板进入。当前显示黑暗途径序列 6「安魂师」，以普通 CoC 基线作为加成计算的对照，背景不填写。
 
 ## 当前角色：序列 6 安魂师
 
-2026-10-14同步：通用提升从序列8起，STR／CON／DEX／INT／POW每阶各＋1；专属被动改为[面板加成](panel-bonuses.md)提案，每阶每项最多＋3，仅配置序列8～4。序列9不加面板。
+通用提升从序列8起，STR／CON／DEX／INT／POW每阶各＋1；另叠加[专属面板加成](panel-bonuses.md)，每阶每项最多＋3，仅配置序列8～4。序列9不加面板。
 
 | 属性 | 普通基线 | 通用累计 | 专属累计 | 当前 |
 | --- | --- | --- | --- | --- |
@@ -19,7 +19,7 @@
 
 当前属性合计483；闪避基础32＋兴趣20＝52（困难26、极难10）。职业240与兴趣130投入保持原建卡记录，不因智力晋升重发技能点，SAN仍60／99。
 
-灵感采用用户填表：普通13＋魔药5＋途径3＝21，当前21／21。途径9→6额外为0／0／2／1，独立记录，不设置灵感提升被动。低智力阈值INT＜40仍暂定，本卡不扣。感知门槛仍为null，页面“—”。完整规则见[灵感成长](spirituality.md)。
+灵感计算为：普通13＋魔药5＋途径3＝21，当前21／21。途径9→6额外为0／0／2／1，独立记录，不设置灵感提升被动。低智力阈值INT＜40仍暂定，本卡不扣。感知门槛仍为null，页面“—”。完整规则见[灵感成长](spirituality.md)。
 
 HP11、DB0、体格0、MOV8、幸运55、护甲0、重伤门槛6。资源由KP手工登记，满值展示不是恢复机制。
 
@@ -84,4 +84,4 @@ HP11、DB0、体格0、MOV8、幸运55、护甲0、重伤门槛6。资源由KP�
 - [官方规则百科：技能](https://callofcthulhuwiki.chaosium.com/investigators/step-three-occupation-and-skills.html)：技能组合、母语与闪避基础值。
 - [Chaosium 第七版转换指南](https://www.chaosium.com/content/FreePDFs/CoC7/CHA23135-Conv-CallofCthulhu7thEditionConversionGuidelines.pdf)：百分制转换、HP、各职业技能点公式存在差异、技能基础值不计入投入。
 
-固定模板保存在 `data/character.js`，由 `js/character.js` 渲染，`css/character.css` 只作用于新增页面。页面只读，可打印；修改模板可直接调整数据，投入点数、阈值与预算的自动检查在 `tests/character.test.cjs`。
+固定模板保存在 `data/character.js`，由 `js/character.js` 渲染，`css/character.css` 只作用于角色卡页面。页面只读，可打印；修改模板可直接调整数据，投入点数、阈值与预算的自动检查在 `tests/character.test.cjs`。

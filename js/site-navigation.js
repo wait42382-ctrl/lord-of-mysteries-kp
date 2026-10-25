@@ -4,7 +4,7 @@
   if (!nav) return;
   var page = location.pathname.split('/').pop().replace(/\.html$/, '');
   document.documentElement.dataset.navigationPage = page;
-  var section = { sequences: 'symbols', pathways: 'symbols', character: 'archives', kp: 'keeper' }[page] || page;
+  var section = { sequences: 'symbols', character: 'archives' }[page] || page;
   var home = { symbols: '#pathways', sequences: '#pathways', chronicle: '#story', artifact: '#artifact', character: '#character' }[page] || '';
   var items = [
     ['index', 'Index', '档案室'], ['symbols', 'Pathways', '神之途径'],

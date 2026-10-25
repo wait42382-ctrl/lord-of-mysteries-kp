@@ -4,7 +4,7 @@
   var reduced = matchMedia('(prefers-reduced-motion: reduce)');
   var storageKey = 'lom-scene-entry';
   var timer = 0, busy = false, generation = 0, pendingHref = null;
-  var routes = /\/(index|symbols|kp|keeper|character|archives|pathways|sequences|chronicle|artifact)\.html$/i;
+  var routes = /\/(index|symbols|keeper|character|archives|sequences|chronicle|artifact)\.html$/i;
   function read() {
     try { return JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { return null; }
   }

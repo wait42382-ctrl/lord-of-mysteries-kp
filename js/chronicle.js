@@ -124,11 +124,17 @@
     if (act.enemies && act.enemies.length) html += section('可能面对的敌人', '<ul>' + act.enemies.map(function (key) {
       var enemy = (window.ENEMIES || []).find(function (entry) { return entry.key === key; });
       return '<li>' + esc(enemy ? enemy.name + ' · ' + enemy.category : key) + '</li>';
-    }).join('') + '</ul><a class="story-event-link" href="kp.html#enemies">查阅敌人图鉴</a>', order++);
+    }).join('') + '</ul><a class="story-event-link" href="archives.html">前往档案目录查阅怪物档案</a>', order++);
     if (act.decision) html += section('抉择', '<p>' + esc(act.decision) + '</p>', order++);
     if (act.endings) html += section('可能的结局', act.endings.map(function (ending) { return '<p class="story-ending">' + esc(ending) + '</p>'; }).join(''), order++);
     if (act.transition) html += section('衔接', '<p>' + esc(act.transition) + '</p>', order++);
-    if (act.randomEvents) html += section('偶发事件', '<a class="story-event-link" href="kp.html#events">打开本幕随机事件表</a>', order++);
+    if (act.randomEvents) {
+      var eventPath = act.randomEvents.split('.');
+      var eventTable = eventPath.reduce(function (value, key) { return value && value[key]; }, window.RANDOM_TABLES);
+      if (eventTable && eventTable.items) html += section('偶发事件', '<p>' + esc(eventTable.title) + '</p><ol>' + eventTable.items.map(function (item) {
+        return '<li>' + esc(item) + '</li>';
+      }).join('') + '</ol>', order++);
+    }
     information.innerHTML = html;
     information.scrollTop = 0;
     window.ChronicleEffects.decodeStory(information, true);

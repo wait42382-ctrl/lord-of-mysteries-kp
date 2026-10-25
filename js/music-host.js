@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var frame = document.getElementById('music-frame');
-  var names = /^(index|symbols|sequences|chronicle|keeper|artifact|archives|kp|pathways|character)\.html$/;
+  var names = /^(index|symbols|sequences|chronicle|keeper|artifact|archives|character)\.html$/;
   var base = new URL('.', location.href), current = null;
   function allowed(href) {
     try {
