@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/music-entry.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>诡秘之主 · 档案室</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/scene-transition.css">
+  <link rel="stylesheet" href="css/keeper-entry.css">
+  <link rel="stylesheet" href="css/artifact-entry.css">
+  <link rel="stylesheet" href="css/archives-entry.css">
+  <script src="js/artifact-entry.js"></script>
+  <script src="js/keeper-entry.js"></script>
+  <script src="js/archives-entry.js"></script>
+  <script src="js/scene-transition.js"></script>
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/site-navigation.css">
+</head>
+<body>
+  <header class="home-header">
+    <a class="home-brand" href="index.html" aria-label="诡秘之主首页"><span>诡秘之主</span><small>Lord of the Mysteries</small></a>
+    <nav id="site-navigation" class="home-navigation" aria-label="页面导航"></nav>
+  </header>
+  <script src="js/site-navigation.js"></script>
+  <main class="home-scene" id="home-scene" data-state="idle" aria-label="神秘学档案室">
+    <div class="scene-plane" id="scene-plane">
+      <img id="home-image" src="assets/scenes/workbench.png" alt="神秘学工作台：调查手稿、塔罗牌、星盘、封蜡档案和封印匣" draggable="false">
+      <svg class="home-highlights" id="home-highlights" aria-hidden="true"></svg>
+    </div>
+    <div class="home-grid" aria-hidden="true"></div>
+    <nav class="home-directory" id="home-directory" aria-label="档案索引"></nav>
+    <section class="home-caption" id="home-caption" aria-live="polite">
+      <h1 id="home-title">诡秘之主</h1>
+      <p class="caption-en" id="home-english">Lord of the Mysteries</p>
+      <div class="caption-rule" aria-hidden="true"></div>
+      <p class="home-description" id="home-description">拍卖会的藏品</p>
+      <a class="home-enter" id="home-enter" href="keeper.html"><span><b id="home-enter-label">裁定台</b><small>READ MORE</small></span><img src="assets/icons/chevron-right.svg" alt=""></a>
+    </section>
+    <aside class="home-rail" aria-label="当前档案"><div><strong id="home-number">00</strong><span><small id="home-count">00 / 05</small><b>Archives</b></span></div></aside>
+    <div class="home-baseline" aria-hidden="true"></div>
+    <div class="home-word" aria-hidden="true">Archives</div>
+  </main>
+  <noscript><a href="keeper.html">裁定台</a> <a href="symbols.html">神之途径</a> <a href="archives.html">档案目录</a></noscript>
+  <script src="data/home-scene.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

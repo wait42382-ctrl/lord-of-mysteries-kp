@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/music-entry.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>档案目录 · LOM诡秘之主</title>
+  <link rel="stylesheet" href="css/archives.css">
+  <link rel="stylesheet" href="css/archive-reader.css">
+  <link rel="stylesheet" href="css/scene-transition.css">
+  <link rel="stylesheet" href="css/archives-entry.css">
+  <script src="js/archives-entry.js"></script>
+  <script src="js/scene-transition.js"></script>
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/archives-polish.css">
+  <link rel="stylesheet" href="css/site-navigation.css">
+</head>
+<body data-menu="closed" data-ready="false">
+  <header class="archives-header">
+    <a class="archives-brand" href="index.html#character"><span>诡秘之主</span><small>Lord of the Mysteries</small></a>
+    <nav id="site-navigation" aria-label="页面导航"></nav>
+  </header>
+  <script src="js/site-navigation.js"></script>
+  <main id="archives-stage" aria-label="档案书列">
+    <canvas id="archive-dust" aria-hidden="true"></canvas>
+    <div class="archive-grid" aria-hidden="true"></div>
+    <div class="archive-heading"><span>拍卖会的藏品</span><h1>档案目录</h1><p>Archives of the veiled</p></div>
+    <button id="directory-toggle" aria-controls="archive-directory" aria-expanded="false" type="button"><span class="toggle-words"><span><b>目录</b><b>收起</b></span></span><i aria-hidden="true"></i></button>
+    <section id="shelf-viewport" aria-label="滚动浏览书籍">
+      <div id="shelf-shift"><div id="shelf-camera"><div id="shelf-ground-world">
+        <svg class="shelf-ground" aria-hidden="true" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="archive-shelf-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34373e"/><stop offset=".62" stop-color="#202127"/><stop offset="1" stop-color="#121316"/></linearGradient>
+            <linearGradient id="archive-shelf-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3c3b42"/><stop offset=".18" stop-color="#25242a"/><stop offset="1" stop-color="#090a0c"/></linearGradient>
+            <pattern id="archive-shelf-grain" width="15" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(7.53)"><path d="M0 1H15M2 5H9" stroke="#d6d3df" stroke-opacity=".035" stroke-width=".5"/></pattern>
+          </defs>
+          <polygon class="shelf-drop-shadow"/>
+          <polygon class="shelf-fascia"/>
+          <polygon class="shelf-surface"/>
+          <polygon class="shelf-grain"/>
+          <polyline class="shelf-front-edge"/>
+          <polyline class="shelf-back-edge"/>
+        </svg>
+      </div><div id="shelf-world"><div id="shelf-track"></div></div></div></div>
+    </section>
+    <section class="book-caption" aria-live="polite" aria-atomic="true"><p id="caption-category">角色模板</p><h2 id="caption-title">安魂师</h2><span id="caption-subtitle">序列 6 · 只读数值模板</span></section>
+    <div id="directory-shell" inert aria-hidden="true"><div class="directory-layer layer-red" aria-hidden="true"></div><div class="directory-layer layer-silver" aria-hidden="true"></div><aside id="archive-directory" aria-label="全部档案目录"><div class="directory-intro"><span>全部档案</span><small>分类 / 书目</small></div><div id="directory-groups"></div><p class="directory-note">点选定位书册<br>再次点击书名或书册以展开</p></aside></div>
+    <div class="archive-backword" aria-hidden="true">BEYOND THE RECORD</div>
+    <div class="shelf-controls"><button id="shelf-prev" type="button" aria-label="上一本书">←</button><span id="shelf-counter">01 / 14</span><button id="shelf-next" type="button" aria-label="下一本书">→</button></div>
+  </main>
+  <footer class="archives-footer"><a href="index.html#character">← 返回档案室</a><small>KEEPER ONLY</small></footer>
+  <dialog id="archive-reader" aria-labelledby="reader-title">
+    <div class="reader-toolbar"><span>拍卖会的藏品 · 守秘人卷宗</span><button id="reader-previous" type="button" hidden>返回前一档案</button><button id="reader-close" type="button" aria-label="合上档案">合上档案 <span>×</span></button></div>
+    <aside class="reader-cover" aria-label="本书章节"><span id="reader-cover-category"></span><b id="reader-cover-title"></b><nav id="reader-chapters" aria-label="章节导航"></nav><p class="reader-side-note">供KP主持与扮演时查阅<br>数值与资源由KP登记</p></aside>
+    <section id="reader-scroll" class="reader-page" tabindex="0" aria-label="档案正文，可滚动阅读"><div class="reader-frontmatter"><p id="reader-category"></p><h2 id="reader-title" tabindex="-1"></h2><p id="reader-description"></p><a id="reader-template" href="character.html" hidden>查看安魂师原数值模板 <span>↗</span></a></div><div id="reader-content"></div></section>
+  </dialog>
+  <noscript><p class="no-script">请启用JavaScript浏览书列。<a href="character.html">查看安魂师数值模板</a></p></noscript>
+  <script src="data/archives.js"></script>
+  <script src="data/spirituality.js"></script>
+  <script src="data/attributes.js"></script>
+  <script src="data/pathways.js"></script>
+  <script src="data/character.js"></script>
+  <script src="data/archive-actors.js"></script>
+  <script src="data/story.js"></script>
+  <script src="data/npcs.js"></script>
+  <script src="data/archive-content.js"></script>
+  <script src="js/archive-reader.js"></script>
+  <script src="js/archives.js"></script>
+  <script src="js/archives-effects.js"></script>
+</body>
+</html>

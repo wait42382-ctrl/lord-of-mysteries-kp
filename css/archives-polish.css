@@ -1,0 +1,28 @@
+/* Chronicle covers use real layout rows, so titles and English never collide with the seal. */
+.archive-book[data-category=story] .book-front{display:grid;grid-template-rows:16px minmax(0,.95fr) minmax(0,1.15fr) minmax(0,.75fr);gap:8px;padding:20px 20px 18px}
+.archive-book[data-category=story] .book-front header{position:static;inset:auto;font-size:8px;letter-spacing:1.4px;align-items:center}
+.archive-book[data-category=story] .cover-title{position:static;inset:auto;align-self:center;font-size:30px;line-height:1.16;letter-spacing:3px}
+.archive-book[data-category=story] .book-front>svg{position:static;inset:auto;align-self:center;justify-self:center;width:100%;height:100%;max-height:110px;max-width:110px}
+.archive-book[data-category=story] .cover-english{position:static;inset:auto;align-self:end;font-size:14px;line-height:1.28;letter-spacing:1px;overflow-wrap:normal}
+.archive-book[data-category=story] .spine-title{white-space:nowrap;font-size:18px;line-height:1;letter-spacing:4px}
+.spine-act{position:absolute;top:36px;left:0;right:0;text-align:center;white-space:nowrap;font:9px/1.2 SimSun,serif;letter-spacing:0}
+.archive-book[data-category=story] .spine-act~.spine-title{top:58px}
+/* Five archive bindings; all remain inert decorative volumes. */
+.shelf-filler .book-front{background:radial-gradient(ellipse at 50% 28%,#ffffff0b,transparent 65%),repeating-linear-gradient(90deg,#0000 0 3px,#00000016 4px 5px),var(--cover);box-shadow:inset 8px 0 13px #0009,inset -2px 0 2px #ffffff20}
+.shelf-filler .book-front:before{inset:13px;border:3px double currentColor;opacity:.55}
+.shelf-filler .book-front header{top:26px;left:24px;right:21px;font-size:7px;letter-spacing:1px;opacity:.8}
+.shelf-filler .book-front>svg{top:28%;left:17%;width:66%;height:43%;opacity:.7;stroke-width:.85}
+.filler-corner{position:absolute;width:16px;height:16px;border:1px solid currentColor;opacity:.75}
+.filler-corner:after{content:'';position:absolute;width:5px;height:5px;background:currentColor;transform:rotate(45deg);left:4px;top:4px;opacity:.6}
+.filler-corner.a{top:17px;left:17px;border-right:0;border-bottom:0}.filler-corner.b{top:17px;right:17px;border-left:0;border-bottom:0}.filler-corner.c{bottom:17px;left:17px;border-right:0;border-top:0}.filler-corner.d{bottom:17px;right:17px;border-left:0;border-top:0}
+.filler-volume{position:absolute;top:18%;left:0;right:0;text-align:center;font:14px/1 Oswald,sans-serif;letter-spacing:4px;opacity:.75}
+.filler-plate{position:absolute;bottom:12%;left:18%;right:18%;border-top:1px solid currentColor;border-bottom:1px solid currentColor;padding:5px 0;text-align:center;font:8px/1.3 Oswald,sans-serif;letter-spacing:1.5px;opacity:.7}
+.shelf-filler .book-spine{background:repeating-linear-gradient(0deg,transparent 0 32px,#00000026 33px 34px),linear-gradient(90deg,#0008,#ffffff0c 45%,#0005),var(--cover)}
+.shelf-filler .book-spine:before,.shelf-filler .book-spine:after{height:12px;border-width:3px 0;opacity:.55}
+.filler-spine-ornament{position:absolute;inset:21% 7px 19%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;opacity:.75}
+.filler-spine-ornament i{width:1px;flex:1;max-height:31%;background:currentColor;position:relative}
+.filler-spine-ornament i:after{content:'';position:absolute;left:-3px;top:50%;width:5px;height:5px;border:1px solid currentColor;transform:rotate(45deg)}
+.filler-spine-ornament b{font:15px/2 SimSun,serif;font-weight:400}.filler-spine-ornament em{font:9px/1 Oswald,sans-serif;font-style:normal;letter-spacing:1px;margin-top:12px}
+.shelf-filler[data-binding="1"] .book-front:before{border-style:solid;border-width:1px 4px}.shelf-filler[data-binding="2"] .book-front:before{outline:1px solid currentColor;outline-offset:-5px}.shelf-filler[data-binding="3"] .book-front:before{border-width:4px 1px}.shelf-filler[data-binding="4"] .book-front:before{border-style:double;border-width:5px}
+@media(min-width:1700px){.archive-book[data-category=story] .book-front{padding:25px 25px 22px;grid-template-rows:20px minmax(0,.95fr) minmax(0,1.15fr) minmax(0,.75fr);gap:11px}.archive-book[data-category=story] .book-front header{font-size:10px}.archive-book[data-category=story] .cover-title{font-size:36px}.archive-book[data-category=story] .book-front>svg{max-height:138px;max-width:138px}.archive-book[data-category=story] .cover-english{font-size:17px}.archive-book[data-category=story] .spine-title{font-size:21px}.spine-act{font-size:11px;top:40px}.filler-volume{font-size:18px}.filler-plate{font-size:10px}}
+@media(max-height:820px){.archive-book[data-category=story] .book-front{padding:17px 17px 15px;grid-template-rows:14px minmax(0,.95fr) minmax(0,1.15fr) minmax(0,.75fr);gap:7px}.archive-book[data-category=story] .cover-title{font-size:26px}.archive-book[data-category=story] .cover-english{font-size:12px}.archive-book[data-category=story] .spine-title{font-size:16px;letter-spacing:3px}.spine-act{font-size:8px;top:36px}.filler-plate{font-size:7px}}

@@ -1,0 +1,17 @@
+/* Shared music control; namespaced so the ten existing stages keep their own styles. */
+#bgm-toggle{--bgm-signal:#b9e1e6;position:fixed;right:24px;bottom:16px;z-index:90;display:flex;align-items:center;gap:14px;width:246px;height:44px;margin:0;padding:5px 12px;border:0;border-radius:0;background:linear-gradient(90deg,#0b0b0de8,#0b0b0db8);color:#aeadb5;cursor:pointer;box-sizing:border-box;isolation:isolate;touch-action:manipulation}
+#bgm-toggle:before{content:'';position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(90deg,transparent 0 5px,#b9bac109 5px 6px);pointer-events:none}
+#bgm-toggle:hover{background-color:#252027;color:#e5e0e5}
+#bgm-toggle:focus-visible{outline:2px solid var(--bgm-signal);outline-offset:4px}
+#bgm-toggle>svg{display:block;flex:0 0 30px;width:30px;height:26px;fill:currentColor}
+#bgm-toggle[aria-pressed=true]>svg{color:#e0e0e5}
+#bgm-toggle .bgm-wave{display:flex;flex:1;align-items:center;justify-content:space-between;gap:3px;height:30px;overflow:hidden}
+#bgm-toggle i{display:block;flex:0 0 3px;width:3px;height:3px;min-height:3px;border-radius:3px;background:var(--bgm-signal);box-shadow:0 0 5px #b9e1e617}
+#bgm-toggle[data-pending=true]{cursor:progress}
+.bgm-status{position:fixed;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+/* Reserve the same lower corner where existing footers have their last text/control. */
+html[data-bgm-page=archives] .archives-footer{padding-right:260px}
+html[data-bgm-page=keeper] .keeper-footer{padding-right:290px}
+html[data-bgm-page=artifact] .artifact-footer{padding-right:250px}
+@media(max-width:760px){#bgm-toggle{right:12px;bottom:10px;width:194px;gap:10px}#bgm-toggle i{flex-basis:2px;width:2px}html[data-bgm-page=archives] .archives-footer{padding-right:0;bottom:70px}html[data-bgm-page=keeper] .keeper-footer,html[data-bgm-page=artifact] .artifact-footer{padding-right:0;margin-bottom:66px}}
+@media print{#bgm-toggle,.bgm-status{display:none!important}}

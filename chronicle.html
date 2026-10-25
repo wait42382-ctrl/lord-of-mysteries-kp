@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <script src="js/music-entry.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>剧情档案 · 拍卖会的藏品</title>
+  <link rel="stylesheet" href="css/chronicle.css">
+  <link rel="stylesheet" href="css/chronicle-polish.css">
+  <link rel="stylesheet" href="css/scene-transition.css">
+  <script src="js/scene-transition.js"></script>
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/site-navigation.css">
+</head>
+<body>
+  <header class="archive-header">
+    <a class="archive-brand" href="index.html#story"><span>诡秘之主</span><small>Lord of the Mysteries</small></a>
+    <nav id="site-navigation" aria-label="页面导航"></nav>
+  </header>
+  <script src="js/site-navigation.js"></script>
+  <main id="chronicle-main" class="chronicle-scene" data-view="overview">
+    <div class="archive-texture" aria-hidden="true"></div>
+    <canvas id="archive-particles" aria-hidden="true"></canvas>
+    <div class="archive-ghost" aria-hidden="true">CHRONICLE</div>
+    <div class="archive-depth-words" aria-hidden="true"><span>BEYOND THE VEIL</span><span>SEALED RECORD</span></div>
+    <div class="chapter-masthead" aria-label="剧情档案">
+      <i class="masthead-long-line left" aria-hidden="true"></i><i class="masthead-long-line right" aria-hidden="true"></i>
+      <div class="masthead-center"><div class="masthead-title-row"><small>CASE 01</small><strong>剧情档案</strong><small>CASE 01</small></div><div class="masthead-subtitle"><i></i><span>CHRONICLE</span><i></i></div><b class="masthead-dots" aria-hidden="true">▪ ▪</b></div>
+      <span class="masthead-page" aria-hidden="true">PAGE <i>—</i> <b id="masthead-page-number">01</b> / 04</span>
+    </div>
+    <section id="chapter-overview" class="chapter-overview" aria-label="四幕剧情总览">
+      <nav class="chapter-nav" aria-label="四幕章节"></nav>
+      <div class="carousel-anchor">
+        <div id="chronicle-carousel" data-motion-x="0" data-motion-y="0">
+          <svg class="chapter-depth-crosses" viewBox="0 0 144 144" aria-hidden="true" focusable="false"><defs><pattern id="chronicle-cross-pattern" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M12 8v8M8 12h8" fill="none" stroke="currentColor" stroke-width="1.4"/></pattern></defs><rect width="144" height="144" fill="url(#chronicle-cross-pattern)"/></svg>
+          <div class="chapter-slides"></div>
+          <div class="picture-brackets" aria-hidden="true">
+            <svg class="picture-bracket left" viewBox="0 0 12 400" preserveAspectRatio="none"><path class="bracket-segment top" d="M0 2V176L12 187"/><path class="bracket-segment bottom" d="M12 213L0 224V398"/><rect class="bracket-dot" x="-1.1" y="0" width="2.2" height="2.2"/><rect class="bracket-dot" x="-1.1" y="397.8" width="2.2" height="2.2"/></svg>
+            <svg class="picture-bracket right" viewBox="0 0 12 400" preserveAspectRatio="none"><path class="bracket-segment top" d="M0 2V176L12 187"/><path class="bracket-segment bottom" d="M12 213L0 224V398"/><rect class="bracket-dot" x="-1.1" y="0" width="2.2" height="2.2"/><rect class="bracket-dot" x="-1.1" y="397.8" width="2.2" height="2.2"/></svg>
+          </div>
+          <div class="chapter-arrow-row">
+            <button type="button" class="chapter-arrow previous" data-step="-1" aria-label="上一幕"><svg viewBox="0 0 158 32" aria-hidden="true"><path class="arrow-shaft" d="M0 16H130"/><path class="arrow-head" d="M132 2l14 14-14 14"/><path class="arrow-head" d="M140 2l14 14-14 14"/></svg></button>
+            <button type="button" class="chapter-arrow next" data-step="1" aria-label="下一幕"><svg viewBox="0 0 158 32" aria-hidden="true"><path class="arrow-shaft" d="M0 16H130"/><path class="arrow-head" d="M132 2l14 14-14 14"/><path class="arrow-head" d="M140 2l14 14-14 14"/></svg></button>
+          </div>
+          <div id="chapter-current-mark" class="chapter-foreground" data-mark-state="idle" aria-hidden="true"><span id="chapter-numeral" class="chapter-mark-number">01</span><div class="chapter-mark-label"><span id="chapter-mark-english" class="chapter-mark-english">THE FIRST TRACE</span></div></div>
+          <div id="chapter-next-mark" class="chapter-secondary-mark" data-mark-state="idle" aria-hidden="true"><span id="next-chapter-numeral" class="chapter-mark-number">02</span><div class="chapter-mark-label"><span id="next-chapter-mark-english" class="chapter-mark-english">BEHIND CLOSED DOORS</span></div></div>
+          <div class="chapter-pagination"><span class="pagination-rule" aria-hidden="true"></span><div class="chapter-dots" aria-label="选择章节"></div></div>
+          <div class="chapter-caption"><h1 id="chapter-title">开场</h1><p id="chapter-subtitle">勘察第一名受害者住所</p></div>
+          <span class="carousel-inscription" aria-hidden="true">THE AUCTION'S RELIC</span>
+        </div>
+      </div>
+    </section>
+    <section id="chapter-detail" class="chapter-detail" aria-label="本幕地图与剧情" aria-hidden="true" inert>
+      <section class="map-column" aria-label="场景平面图">
+        <div class="map-heading"><div><small id="map-act-number">ACT 01</small><h1 id="map-title">受害者住所</h1></div><span id="map-area"></span></div>
+        <div class="map-frame"><span class="map-corner a" aria-hidden="true"></span><span class="map-corner b" aria-hidden="true"></span><span class="map-corner c" aria-hidden="true"></span><span class="map-corner d" aria-hidden="true"></span><div id="map-stage"></div></div>
+        <div class="map-toolbar"><span id="map-scale"></span><div><button id="map-zoom-out" type="button" aria-label="缩小地图">−</button><button id="map-reset" type="button" aria-label="复位地图">复位</button><button id="map-zoom-in" type="button" aria-label="放大地图">＋</button><a id="map-original" href="assets/story-maps/act-01.svg" target="_blank" rel="noopener" aria-label="打开独立矢量平面图">原图</a></div></div>
+        <div id="room-information" class="room-information" aria-live="polite"></div>
+      </section>
+      <div class="detail-right"><div class="detail-topline"><span id="detail-act-title"></span><span>Keeper's archive</span></div><div id="chapter-information" class="chapter-information" tabindex="0" aria-label="剧情细节，可滚动阅读"></div><div class="detail-scroll-hint" aria-hidden="true"><i></i><span>向下探索</span></div></div>
+    </section>
+    <button id="chapter-back" type="button" class="chapter-back" hidden><img src="assets/icons/arrow-left.svg" alt=""><span>返回四幕<small>Go back</small></span></button>
+    <aside class="archive-rail" aria-label="当前章节"><strong id="rail-number">01</strong><span id="rail-counter">01 / 04</span><b>Chronicle</b></aside>
+    <div class="archive-baseline" aria-hidden="true"><span id="archive-progress"></span></div>
+    <div class="archive-bottom"><span>拍卖会的藏品</span><small>Backlund · A sealed record</small></div>
+    <div class="archive-footer" aria-hidden="true"><div class="footer-origin"><b>▸ ▸ ▸</b><span>BACKLUND ARCHIVE</span></div><i class="footer-line"></i><div class="footer-seal"><svg viewBox="0 0 100 60"><path d="M3 3h94L50 57Z"/></svg><span>KEEPER ONLY</span></div><i class="footer-line"></i><span class="footer-ellipsis">▪ ▪ ▪</span><i class="footer-line short"></i><div class="footer-hatching"></div></div>
+  </main>
+  <noscript><p class="no-script">请启用JavaScript查看四幕剧情档案。</p></noscript>
+  <script src="data/story.js"></script><script src="data/npcs.js"></script><script src="data/enemies.js"></script><script src="data/story-maps.js"></script><script src="js/chronicle-effects.js"></script><script src="js/chronicle.js"></script>
+</body>
+</html>

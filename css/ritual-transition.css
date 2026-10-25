@@ -1,0 +1,53 @@
+/* The original wipe remains available for other routes and fallback navigation. */
+#ritual-aperture{position:fixed;inset:0;z-index:10004;overflow:hidden;pointer-events:auto}
+.ritual-orbit{position:absolute;left:43.82%;top:49%;width:min(56vh,32vw,560px);aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
+.ritual-orbit>svg{display:block;width:100%;height:100%;overflow:visible}
+.ritual-measures{transform-origin:200px 200px}
+.ritual-orbit circle,.ritual-orbit path{fill:none;vector-effect:non-scaling-stroke}
+.ritual-outer{stroke:#c5b8bf;stroke-width:1;stroke-dasharray:1;stroke-dashoffset:0}
+.ritual-inner{stroke:#a14258;stroke-width:1.3;stroke-dasharray:.36 .06 .14 .06 .32 .06}
+.ritual-brackets{stroke:#b87988;stroke-width:1;stroke-dasharray:1;stroke-dashoffset:0}
+.ritual-axes{stroke:#a7a0aa;stroke-width:.8;opacity:.55}
+.ritual-orbit .ritual-point{fill:#bd536c;stroke:#d9b7c0;stroke-width:1}
+#ritual-glyph{position:absolute;left:32%;top:32%;width:36%;height:36%;object-fit:contain;opacity:0;filter:drop-shadow(0 0 6px #982d4033)}
+.ritual-connector{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.ritual-connector path{fill:none;stroke:#b34862;stroke-width:1;stroke-dasharray:1;stroke-dashoffset:1}
+html[data-ritual]::before{background:#0b0b0d;height:100vh;transform:none;visibility:visible}
+html[data-ritual=leaving]::before{animation:ritual-dim .78s ease-in both}
+html[data-ritual=entering]::before{opacity:1;transition:none}
+html[data-ritual=revealing]::before{opacity:0;transition:opacity .58s ease-out}
+html[data-ritual=leaving] .world-scene{z-index:10002}
+html[data-ritual=leaving] .world-scene>:not(.symbol-stage){opacity:.08;transition:opacity .48s}
+html[data-ritual=leaving] .world-header{opacity:.1;transition:opacity .4s}
+html[data-ritual=leaving] .world-detail{animation:ritual-caption-dim .52s ease-out both}
+html[data-ritual=leaving] .symbol-more{border-color:#dc7890}
+html[data-ritual=leaving] .ritual-connector path{animation:ritual-trace .42s ease-out both}
+html[data-ritual=leaving] .ritual-outer,html[data-ritual=leaving] .ritual-brackets{animation:ritual-trace .62s .12s ease-out both}
+html[data-ritual=leaving] .ritual-measures{animation:ritual-align .78s cubic-bezier(.22,.61,.36,1) both}
+html[data-ritual=leaving] #ritual-glyph{animation:ritual-imprint .78s ease-out both}
+html[data-ritual=leaving] .ritual-inner{animation:ritual-ring .7s ease-out both}
+html[data-ritual=entering] .ritual-connector{display:none}
+html[data-ritual=entering] #ritual-glyph{opacity:1}
+html[data-ritual=entering] .ritual-measures{transform:rotate(18deg)}
+html[data-ritual=revealing] .ritual-connector{display:none}
+html[data-ritual=revealing] .ritual-orbit{animation:ritual-dissolve 1.35s ease-out both}
+html[data-ritual=revealing] .ritual-measures{transform:rotate(18deg)}
+html[data-ritual=revealing] #ritual-glyph{animation:ritual-glyph-out .4s ease-out both}
+#sequence-stage[data-entry=ritual][data-intro=waiting] .sequence-column{opacity:0}
+#sequence-stage[data-entry=ritual][data-intro=playing] .vitruvian-arm{animation-duration:.85s;animation-delay:calc(var(--delay) * .65)}
+#sequence-stage[data-entry=ritual][data-intro=playing] .vitruvian-body{animation-duration:.5s}
+#sequence-stage[data-entry=ritual][data-intro=playing][data-view=overview] .sequence-node{border-bottom-color:transparent}
+#sequence-stage[data-entry=ritual][data-intro=playing][data-view=overview] .sequence-node::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:#b8b8bc66;transform-origin:left;animation:ritual-rule .36s calc(560ms + var(--reveal-order) * 80ms) both}
+#sequence-stage[data-entry=ritual][data-intro=playing][data-view=overview] .sequence-node>span{animation:ritual-label .32s calc(660ms + var(--reveal-order) * 80ms) both}
+#sequence-stage[data-entry=ritual] .sequence-node:focus-visible>span{animation:none!important;opacity:1!important}
+@keyframes ritual-dim{from{opacity:0}to{opacity:1}}
+@keyframes ritual-caption-dim{0%,18%{opacity:1}100%{opacity:.05}}
+@keyframes ritual-trace{from{stroke-dashoffset:1;opacity:0}to{stroke-dashoffset:0;opacity:1}}
+@keyframes ritual-align{from{transform:rotate(-24deg);opacity:0}to{transform:rotate(18deg);opacity:1}}
+@keyframes ritual-ring{from{opacity:0;transform:scale(.7);transform-origin:200px 200px}to{opacity:1;transform:scale(1);transform-origin:200px 200px}}
+@keyframes ritual-imprint{0%,45%{opacity:0;transform:scale(.7)}100%{opacity:1;transform:scale(1)}}
+@keyframes ritual-dissolve{0%,18%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.16)}}
+@keyframes ritual-glyph-out{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.7)}}
+@keyframes ritual-rule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes ritual-label{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){#ritual-aperture{display:none!important}#sequence-stage .sequence-column{opacity:1!important}#sequence-stage .sequence-node>span{animation:none!important;opacity:1!important}}

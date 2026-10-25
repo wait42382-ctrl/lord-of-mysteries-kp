@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <script src="js/music-entry.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>封印物 · 拜祭之指</title>
+  <link rel="stylesheet" href="css/artifact.css">
+  <link rel="stylesheet" href="css/artifact-particles.css">
+  <link rel="stylesheet" href="css/scene-transition.css">
+  <link rel="stylesheet" href="css/artifact-entry.css">
+  <script src="js/artifact-entry.js"></script>
+  <script src="js/scene-transition.js"></script>
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/site-navigation.css">
+</head>
+<body>
+  <header class="artifact-header">
+    <a class="artifact-brand" href="index.html#artifact"><span>诡秘之主</span><small>Lord of the Mysteries</small></a>
+    <nav id="site-navigation" aria-label="页面导航"></nav>
+  </header>
+  <script src="js/site-navigation.js"></script>
+  <main class="artifact-stage">
+    <div class="artifact-grain" aria-hidden="true"></div>
+    <figure class="artifact-exhibit">
+      <img id="artifact-portrait" src="assets/artifact-scenes/baiji-zhi-approved.png" width="1024" height="1536" alt="拜祭之指竖插在金丝镶边的深酒红呢绒垫上；窄高玻璃罩内浸血下陷，罩外绒毛蓬松" draggable="false">
+      <button type="button" id="artifact-finger-hit" aria-label="选择拜祭之指" aria-describedby="artifact-particle-hint" hidden></button>
+      <figcaption><span>拜祭之指</span><small>非官方封印物 · 无编号</small><span id="artifact-particle-hint" role="status" aria-live="polite"></span></figcaption>
+    </figure>
+    <canvas id="artifact-fog" aria-hidden="true"></canvas>
+    <canvas id="artifact-particle-canvas" aria-hidden="true"></canvas>
+    <aside class="artifact-margin" aria-hidden="true"><span>SEALED ARTIFACT</span><i></i><span>KEEPER’S ARCHIVE</span></aside>
+    <div class="artifact-document">
+      <div class="artifact-heading"><p>Sealed Artifact</p><h1>拜祭之指</h1><div class="artifact-status"><span>罪犯途径 · 序列 3</span><strong>真实危险等级 · 1级</strong></div></div>
+      <nav class="artifact-sections" aria-label="封印物档案章节">
+        <a href="#appearance" aria-current="location">初见与外观</a><a href="#influence">接近影响</a><a href="#identity">封存档案</a><a href="#effects">效果</a><a href="#suppression">抑制与裁定</a>
+      </nav>
+      <article id="artifact-reading" tabindex="0" aria-label="封印物详细信息"></article>
+    </div>
+  </main>
+  <footer class="artifact-footer"><a href="index.html#artifact">返回档案室</a><span>拍卖会的藏品</span><small>拜祭之指 · 封存档案</small></footer>
+  <script src="data/artifact.js"></script>
+  <script src="data/artifact-particles.js"></script>
+  <script src="js/artifact.js"></script>
+  <script src="js/artifact-effects.js"></script>
+  <script src="js/artifact-particles.js"></script>
+</body>
+</html>

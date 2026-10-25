@@ -1,0 +1,10 @@
+#artifact-repair{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0;filter:saturate(.83);overflow:visible}
+#artifact-finger-hit{position:absolute;z-index:4;padding:0;border:0;background:transparent;cursor:pointer;touch-action:manipulation;color:transparent}
+#artifact-finger-hit:disabled{cursor:wait}#artifact-finger-hit[hidden]{display:none}
+.artifact-exhibit:is([data-particle-state=scattering],[data-particle-state=particles]) #artifact-finger-hit{left:0!important;top:0!important;width:100%!important;height:100%!important;clip-path:none!important}
+#artifact-finger-hit:focus-visible{background:#d595a426;outline:0}
+#artifact-finger-hit:focus-visible:after{content:'';position:absolute;inset:2px;border:2px solid #e2a4b7;border-radius:40%;box-shadow:0 0 16px #e2a4b788}
+#artifact-particle-canvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:4;pointer-events:none}
+#artifact-particle-hint{font:11px/1.8 'Microsoft YaHei',sans-serif;letter-spacing:1px;color:#c69ba9;min-height:20px;margin-top:2px}
+.artifact-exhibit figcaption{z-index:5;pointer-events:none}
+@media(prefers-reduced-motion:reduce){#artifact-repair{transition:none}}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <script src="js/music-entry.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>序列档案 · LOM诡秘之主</title>
+  <link rel="stylesheet" href="css/symbols.css">
+  <link rel="stylesheet" href="css/sequences.css">
+  <link rel="stylesheet" href="css/scene-transition.css">
+  <link rel="stylesheet" href="css/ritual-transition.css">
+  <script src="js/ritual-transition.js"></script>
+  <script src="js/scene-transition.js"></script>
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/site-navigation.css">
+</head>
+<body>
+  <header class="world-header">
+    <a class="world-brand" href="index.html#pathways" aria-label="返回档案室"><span>诡秘之主</span><small>Lord of the Mysteries</small></a>
+    <nav id="site-navigation" class="world-navigation" aria-label="页面导航"></nav>
+  </header>
+  <script src="js/site-navigation.js"></script>
+  <main id="sequence-stage" data-view="overview" data-intro="waiting" aria-label="序列档案">
+    <div class="world-grid" aria-hidden="true"></div>
+    <div class="world-inscriptions sequence-inscriptions" aria-hidden="true"><span>ASCENSION</span><span>BEYOND</span><span>THE VEIL</span></div>
+    <div class="world-halftone" aria-hidden="true"></div>
+    <div class="world-dust" aria-hidden="true"></div>
+    <div class="pathway-caption"><a id="sequence-home" href="#fool" aria-label="返回本途径序列总览"><h1 id="sequence-pathway-title">占卜家</h1></a><span id="sequence-pathway-english">Seer</span></div>
+    <div id="sequence-backdrop">
+      <div id="vitruvian-art" role="img" aria-label="银白暗红的维特鲁威人，四组手臂逐层展开">
+        <div id="vitruvian-fragments" aria-hidden="true"></div>
+        <img id="vitruvian-source" src="assets/sequences/vitruvian.png" alt="" draggable="false">
+      </div>
+      <nav id="sequence-left" class="sequence-column" aria-label="序列9至5"></nav>
+      <nav id="sequence-right" class="sequence-column" aria-label="序列4至0"></nav>
+    </div>
+    <button id="sequence-focus" class="sequence-node" type="button" aria-label="返回序列总览" aria-hidden="true" tabindex="-1"></button>
+    <section id="sequence-panel" aria-label="序列能力" aria-hidden="true" inert>
+      <div class="sequence-panel-top"><h2>能力<small>Abilities</small></h2><div class="spirituality-summary"><span>灵感累计加成</span><strong id="spirituality-total">+0</strong></div></div>
+      <div id="sequence-abilities" tabindex="0" role="region" aria-label="能力详情，可滚动"></div>
+      <nav class="sequence-detail-nav" aria-label="切换序列"><button id="sequence-previous" type="button">上一阶</button><span id="sequence-level-label">序列 9</span><button id="sequence-next" type="button">下一阶</button></nav>
+    </section>
+    <aside class="world-rail" aria-label="当前序列"><div><strong id="sequence-number">10</strong><span><small id="sequence-rail-count">09 — 00</small><b>Sequence</b></span></div></aside>
+    <div class="world-baseline" aria-hidden="true"><span></span></div>
+    <div class="world-category" aria-hidden="true">Sequences</div>
+    <a id="sequence-pathway-back" class="sequence-return" href="symbols.html#fool"><img src="assets/icons/arrow-left.svg" alt=""><span>返回途径<small>Pathways</small></span></a>
+    <button id="sequence-back" class="world-back" type="button" aria-hidden="true" tabindex="-1"><img src="assets/icons/arrow-left.svg" alt=""><span>返回<small>Go back</small></span></button>
+  </main>
+  <noscript><p class="no-script">启用 JavaScript 后可查看序列档案。</p></noscript>
+  <script src="data/spirituality.js"></script><script src="data/attributes.js"></script><script src="data/pathways.js"></script>
+  <script src="data/pathway-presentation.js"></script><script src="data/sequence-scene.js"></script><script src="js/sequences.js"></script>
+</body>
+</html>

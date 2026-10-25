@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <script src="js/music-entry.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>裁定台 · 诡秘之主</title>
+  <link rel="stylesheet" href="css/keeper.css">
+  <link rel="stylesheet" href="css/scene-transition.css">
+  <link rel="stylesheet" href="css/keeper-entry.css">
+  <script src="js/keeper-entry.js"></script>
+  <script src="js/scene-transition.js"></script>
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/site-navigation.css">
+</head>
+<body>
+  <header class="keeper-header">
+    <a class="keeper-brand" href="index.html"><span>诡秘之主</span><small>Lord of the Mysteries</small></a>
+    <nav id="site-navigation" aria-label="页面导航"></nav>
+  </header>
+  <script src="js/site-navigation.js"></script>
+  <main id="keeper-main" data-view="overview">
+    <section id="keeper-overview" aria-label="裁定台工具">
+      <div class="keeper-portals">
+        <a class="keeper-portal" href="#dice" data-kind="dice">
+          <img src="assets/keeper-scenes/dice.png" alt="灰雾中愚者的剪影，前景的手正向骰盘投下骰子" draggable="false">
+          <div class="portal-shade" aria-hidden="true"></div>
+          <div class="portal-copy"><div class="portal-title"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 3 20 11v22L24 47 4 36V14Zm0 0v21m20-10L24 24 4 14m20 10v23M14 9l20 11v21"/></svg><h1>掷骰检定</h1></div><p class="portal-english">CAST THE DICE</p><small class="portal-invitation">VIEW MORE &gt;</small><span class="portal-rule" aria-hidden="true"></span></div>
+        </a>
+        <a class="keeper-portal" href="#whispers" data-kind="whispers">
+          <img src="assets/keeper-scenes/whispers.png" alt="黑雾丝线缠绕，桌旁的人物侧耳倾听不可见的低语" draggable="false">
+          <div class="portal-shade" aria-hidden="true"></div>
+          <div class="portal-copy"><div class="portal-title"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M17 34c0-9 15-9 15-21a9 9 0 0 0-18 0m-5 0a14 14 0 0 1 28 0c0 14-14 14-14 22 0 8-10 9-12 2m7-23a5 5 0 0 1 9 3m9 15 6-4m-6 11 7 1"/></svg><h1>呓语</h1></div><p class="portal-english">WHISPERS</p><small class="portal-invitation">VIEW MORE &gt;</small><span class="portal-rule" aria-hidden="true"></span></div>
+        </a>
+        <a class="keeper-portal" href="#control" data-kind="control">
+          <img src="assets/keeper-scenes/control.png" alt="跪地挣扎的人物与背后脱离本体的枝状异影" draggable="false">
+          <div class="portal-shade" aria-hidden="true"></div>
+          <div class="portal-copy"><div class="portal-title"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 2 17 10-2 26-15 8L9 38 7 12ZM24 2l-5 15 11 8-12 11 6 10m-5-29L7 12m23 13 10-7M18 36 9 38"/></svg><h1>失控表现</h1></div><p class="portal-english">LOSS OF CONTROL</p><small class="portal-invitation">VIEW MORE &gt;</small><span class="portal-rule" aria-hidden="true"></span></div>
+        </a>
+      </div>
+      <div class="overview-ghost" aria-hidden="true">THE KEEPER</div>
+      <div class="overview-index" aria-label="裁定台，三个工具"><strong>03</strong><span><small>KEEPER'S</small><b>INSTRUMENTS</b></span></div>
+      <a class="overview-return" href="index.html#host" aria-label="返回档案室"><svg viewBox="0 0 32 16" aria-hidden="true"><path d="m2 13 10-10 10 10m-1-5 5 5"/></svg></a>
+    </section>
+
+    <section id="keeper-dice" class="keeper-detail" aria-labelledby="dice-heading" hidden>
+      <div class="detail-art dice-art" aria-hidden="true"></div>
+      <div class="dice-scene-heading"><p class="detail-kicker">Cast the dice</p><h1 id="dice-heading" tabindex="-1">命运落定之前</h1><p>掷下骰子，静候回响。</p></div>
+      <div id="dice-stage" class="dice-stage" data-state="idle" role="img" aria-label="立体骰盘，等待掷骰"><canvas id="dice-canvas" aria-hidden="true"></canvas><div class="dice-stage-ring" aria-hidden="true"></div><span class="tray-caption" aria-hidden="true">FATE IS CAST</span></div>
+      <div class="dice-reading"><div class="result-score"><output id="dice-total" aria-live="polite">—</output><small id="dice-scale" aria-hidden="true">/ 100</small></div><span id="dice-grade">等待掷骰</span></div>
+      <aside class="dice-controls detail-reading" aria-label="掷骰操作">
+        <div class="reading-heading"><h2>掷骰与检定</h2><span>d100</span></div>
+        <form id="check-form"><fieldset><legend>技能检定</legend><div class="control-row"><label for="dice-target">目标值<input id="dice-target" type="number" min="1" max="100" value="50" required></label><label for="dice-bonus">奖励／惩罚<select id="dice-bonus"><option value="0">无</option><option value="1">1 奖励骰</option><option value="2">2 奖励骰</option><option value="-1">1 惩罚骰</option><option value="-2">2 惩罚骰</option></select></label></div><button id="roll-check" class="keeper-action" type="submit"><span>掷骰检定</span><svg viewBox="0 0 30 16" aria-hidden="true"><path d="M0 8h27M19 1l8 7-8 7"/></svg></button></fieldset></form>
+        <form id="expression-form"><fieldset><legend>自定义掷骰</legend><label class="expression-label" for="dice-expression">骰子表达式</label><div class="expression-row"><input id="dice-expression" type="text" value="2d6+3" maxlength="120" spellcheck="false" autocomplete="off" aria-describedby="expression-help"><button id="roll-expression" type="submit" class="quiet-button">掷骰</button></div><p id="expression-help" class="field-help">例如 2d6+3 或 1d6+1d8</p><div class="quick-dice" aria-label="快速掷骰"><button type="button" data-quick="1d4">d4</button><button type="button" data-quick="1d6">d6</button><button type="button" data-quick="1d8">d8</button><button type="button" data-quick="1d10">d10</button><button type="button" data-quick="1d12">d12</button><button type="button" data-quick="1d20">d20</button><button type="button" data-quick="1d100">d100</button></div></fieldset></form>
+        <p id="dice-error" class="field-error" role="alert"></p>
+        <section class="history-section" aria-labelledby="history-heading"><div class="history-heading"><h3 id="history-heading">本场记录</h3><span id="history-count">0 次</span></div><p id="history-empty">尚未掷骰，结果将在此留存。</p><ol id="roll-history"></ol></section>
+      </aside>
+    </section>
+
+    <section id="keeper-table" class="keeper-detail" aria-labelledby="table-heading" hidden>
+      <div id="table-art" class="detail-art table-art" aria-hidden="true"></div>
+      <div class="table-art-caption"><span id="table-art-english"></span><p id="table-art-caption"></p></div>
+      <div class="table-reading detail-reading"><div class="reading-heading"><div><p id="table-kicker" class="detail-kicker"></p><h1 id="table-heading" tabindex="-1"></h1></div><span id="table-count"></span></div><p id="table-description" class="table-description"></p><div class="table-result-wrap"><span id="table-result-number" class="result-number" aria-hidden="true">—</span><p id="table-result" data-state="idle" aria-live="polite">等待揭示</p><p id="table-result-readable" class="sr-only" aria-live="polite"></p></div><button id="table-draw" class="keeper-action"><span id="table-draw-label"></span><svg viewBox="0 0 30 16" aria-hidden="true"><path d="M0 8h27M19 1l8 7-8 7"/></svg></button><div class="all-toggle-row"><button id="show-all" class="quiet-button" aria-expanded="false" aria-controls="table-list">查看全部</button><span id="table-hint"></span></div><ol id="table-list" hidden></ol></div>
+    </section>
+
+    <div class="detail-toolbar" hidden><a id="back-overview" href="#overview"><span aria-hidden="true">‹</span> 返回裁定台</a><nav aria-label="裁定工具"><a href="#dice">掷骰</a><a href="#whispers">呓语</a><a href="#control">失控表现</a></nav></div>
+    <canvas id="keeper-dust" aria-hidden="true"></canvas>
+  </main>
+  <footer class="keeper-footer"><span class="footer-name">裁定台<small>Keeper's instruments</small></span><label class="act-label" for="current-act">当前幕<select id="current-act"><option value="1">第一幕 · 开场</option><option value="2">第二幕 · 调查</option><option value="3">第三幕 · 冲突</option><option value="4">第四幕 · 高潮与结局</option></select></label><a href="chronicle.html" id="current-story">查看剧情档案</a><span class="footer-mark" aria-hidden="true">KEEPER ONLY</span></footer>
+  <div id="dice-omen" class="dice-omen" aria-hidden="true" hidden></div>
+  <noscript><p class="noscript-message">请启用 JavaScript 使用裁定工具。<a href="index.html">返回档案室</a></p></noscript>
+  <script src="data/events.js"></script>
+  <script src="js/dice.js"></script>
+  <script src="js/keeper-engine.js"></script>
+  <script src="js/keeper-dice.js"></script>
+  <script src="js/keeper.js"></script>
+  <script src="js/keeper-effects.js"></script>
+</body>
+</html>

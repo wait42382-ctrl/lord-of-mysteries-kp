@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <script src="js/music-entry.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>神之途径 · LOM诡秘之主</title>
+  <link rel="stylesheet" href="css/symbols.css">
+  <link rel="stylesheet" href="css/scene-transition.css">
+  <link rel="stylesheet" href="css/ritual-transition.css">
+  <script src="js/ritual-transition.js"></script>
+  <script src="js/scene-transition.js"></script>
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/site-navigation.css">
+</head>
+<body>
+  <header class="world-header">
+    <a class="world-brand" href="index.html#pathways" aria-label="诡秘之主，返回档案室"><span>诡秘之主</span><small>Lord of the Mysteries</small></a>
+    <nav id="site-navigation" class="world-navigation" aria-label="页面导航"></nav>
+  </header>
+  <script src="js/site-navigation.js"></script>
+  <main class="world-scene" data-view="overview" aria-label="神之途径">
+    <div class="world-grid" aria-hidden="true"></div>
+    <div class="world-inscriptions" aria-hidden="true"><span>MYSTERIES</span><span>BEYOND</span><span>THE VEIL</span></div>
+    <div class="world-halftone" aria-hidden="true"></div>
+    <div class="world-dust" aria-hidden="true"></div>
+    <section class="symbol-stage" aria-label="途径粒子舞台"><canvas id="symbol-canvas" aria-label="塔罗牌粒子符号"></canvas></section>
+    <img id="cursor-badge" alt="" aria-hidden="true" hidden>
+    <nav class="symbol-index" aria-label="22条途径">
+      <div id="symbol-list"></div>
+      <div class="directory-progress" aria-hidden="true"><span id="directory-range">01–06</span><span>/ 22</span></div>
+    </nav>
+    <section id="world-detail" class="world-detail" aria-labelledby="symbol-title" aria-hidden="true" inert>
+      <div class="detail-heading"><h1 id="symbol-title">占卜家</h1><p id="symbol-key">Seer</p></div>
+      <p id="symbol-description"></p>
+      <a id="symbol-more" class="symbol-more" href="sequences.html#fool"><span>窥探序列…<small>Beyond the Veil</small></span><img src="assets/icons/chevron-right.svg" alt=""></a>
+    </section>
+    <div class="detail-controls" aria-hidden="true" inert>
+      <button id="world-previous" class="world-arrow previous" type="button" aria-label="上一条途径" title="上一条途径"><img src="assets/icons/chevron-left.svg" alt=""></button>
+      <button id="world-next" class="world-arrow next" type="button" aria-label="下一条途径" title="下一条途径"><img src="assets/icons/chevron-right.svg" alt=""></button>
+      <button id="world-back" class="world-back" type="button"><img src="assets/icons/arrow-left.svg" alt=""><span>返回<small>Go back</small></span></button>
+    </div>
+    <aside class="world-rail" aria-label="当前途径"><div><strong id="symbol-number">01</strong><span><small id="rail-count">01 / 22</small><b>Pathways</b></span></div></aside>
+    <div class="world-baseline" aria-hidden="true"><span id="world-progress"></span></div>
+    <div class="world-category" aria-hidden="true">Pathways</div>
+  </main>
+  <noscript><p class="no-script">启用 JavaScript 后可查看途径档案。</p></noscript>
+  <script src="data/pathway-symbols.js"></script><script src="data/tarot-particles.js"></script><script src="data/tarot-back-particles.js"></script><script src="data/pathway-presentation.js"></script><script src="js/symbols.js"></script>
+</body></html>

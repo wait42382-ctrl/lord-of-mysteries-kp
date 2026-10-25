@@ -1,0 +1,74 @@
+.character-page { height: auto; min-height: 100%; }
+.character-page .topbar { flex-wrap: wrap; gap: 14px; }
+.character-main { width: min(1120px, 100%); margin: 0 auto; padding: 32px 24px 48px; }
+.sheet-intro { padding-bottom: 28px; }
+.sheet-eyebrow { color: var(--gold-dim); font-size: 12px; letter-spacing: 2px; }
+.sheet-intro h2 { font-size: 30px; color: var(--gold); margin: 6px 0; }
+.sheet-intro p { color: var(--muted); }
+.sheet-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+.sheet-section { padding: 22px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); margin-bottom: 20px; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+.section-heading h2 { color: var(--gold); font-size: 18px; }
+.section-heading > span { color: var(--muted); font-size: 12px; }
+.resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.resource-card, .attribute-card { border: 1px solid var(--border); border-radius: 8px; background: var(--panel-2); padding: 16px; }
+.resource-card h3, .attribute-card h3 { font-size: 13px; font-weight: 400; color: var(--muted); }
+.resource-card strong { display: block; font-size: 25px; margin: 6px 0; color: var(--gold); font-variant-numeric: tabular-nums; }
+.resource-card p, .attribute-card p { font-size: 12px; color: var(--muted); }
+.attribute-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.attribute-card h3 span { color: var(--gold-dim); margin-left: 4px; }
+.attribute-card strong { display: block; font-size: 32px; font-variant-numeric: tabular-nums; margin: 4px 0; }
+.attribute-card p span { color: var(--border-strong); margin: 0 4px; }
+.skill-table-wrap { overflow-x: auto; }
+.skill-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.skill-table th, .skill-table td { padding: 10px 12px; text-align: center; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+.skill-table thead th { font-weight: 400; color: var(--muted); background: var(--panel-2); white-space: nowrap; }
+.skill-table th:first-child { text-align: left; }
+.skill-table tbody th { font-weight: 400; }
+.skill-table tbody tr:nth-child(even) { background: rgba(255,255,255,.018); }
+.skill-value { color: var(--gold); font-weight: 700; }
+.base-skills { margin-top: 20px; }
+.base-skills summary, .sheet-notes summary { cursor: pointer; color: var(--gold-dim); }
+.base-skills[open] summary { margin-bottom: 14px; }
+.combat-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
+.combat-summary p { display: flex; flex-direction: column; gap: 5px; }
+.combat-summary span { color: var(--muted); font-size: 12px; }
+.combat-summary strong { font-size: 14px; font-weight: 400; }
+.pathway-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.pathway-summary p { display: flex; flex-direction: column; gap: 5px; }
+.pathway-summary span { color: var(--muted); font-size: 12px; }
+.pathway-summary strong { font-size: 15px; font-weight: 400; }
+.pathway-link { font-size: 12px; color: var(--gold-dim); }
+.attribute-card .attribute-origin { margin-bottom: 5px; color: var(--gold-dim); }
+.pending-value { color: var(--muted); }
+.sheet-notes p { color: var(--muted); margin-top: 12px; font-size: 13px; }
+.sheet-notes a { color: var(--gold); }
+@media (max-width: 600px) {
+  .character-page .topbar { padding: 14px; }
+  .character-page .topbar-title { flex-wrap: wrap; gap: 4px 12px; }
+  .character-main { padding: 24px 12px; }
+  .sheet-intro h2 { font-size: 24px; }
+  .sheet-section { padding: 14px; }
+  .resource-grid, .attribute-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .resource-card, .attribute-card { padding: 12px; }
+  .resource-card strong { font-size: 21px; }
+  .skill-table th, .skill-table td { padding: 9px 7px; }
+  .skill-table th:nth-child(2), .skill-table th:nth-child(3), .skill-table th:nth-child(4),
+  .skill-table td:nth-child(2), .skill-table td:nth-child(3), .skill-table td:nth-child(4) { display: none; }
+  .combat-summary { grid-template-columns: 1fr; }
+  .pathway-summary { grid-template-columns: 1fr; }
+}
+@media print {
+  .character-page { background: white; color: black; }
+  .character-page .topbar, .character-page .foot { display: none; }
+  .character-main { width: 100%; padding: 0; }
+  .sheet-intro h2, .section-heading h2, .resource-card strong, .skill-value { color: black; }
+  .sheet-section, .resource-card, .attribute-card, .skill-table thead th { background: white; border-color: #bbb; }
+  .sheet-section { padding: 12px; }
+  .resource-card, .attribute-card, .skill-table tr { break-inside: avoid; }
+  .resource-card h3, .attribute-card h3, .attribute-card h3 span, .resource-card p, .attribute-card p, .section-heading > span, .skill-table thead th, .combat-summary span, .sheet-intro p { color: #444; }
+  .sheet-tags, .sheet-notes { display: none; }
+  .base-skills summary { color: black; }
+  .pathway-summary span, .pending-value, .attribute-card .attribute-origin { color: #444; }
+  .skill-table-wrap { overflow: visible; }
+}

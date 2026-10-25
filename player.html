@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>诡秘之主 · 档案室</title>
+  <link rel="stylesheet" href="css/music-host.css">
+  <link rel="stylesheet" href="css/bgm.css">
+  <link rel="stylesheet" href="css/startup.css">
+</head>
+<body>
+  <iframe id="music-frame" title="诡秘之主页面" allow="autoplay"></iframe>
+  <section id="startup-screen" aria-label="档案室开场" hidden>
+    <svg class="startup-ornaments" viewBox="0 0 1600 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="startup-engraving" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M0 210V38Q0 0 38 0H230M10 190V42Q10 10 42 10H205M22 135V48Q22 22 48 22H145"/>
+          <path d="M18 125C60 117 70 85 55 55C86 70 117 59 125 18M28 175C79 149 29 130 54 110C70 96 86 104 89 118M175 28C150 80 131 29 111 54C98 68 103 87 118 89"/>
+          <circle cx="55" cy="55" r="34"/><circle cx="55" cy="55" r="27"/>
+          <path class="startup-accent" d="M55 15L61 46L95 55L63 62L55 95L48 63L15 55L47 48ZM33 33L51 46L77 33L64 52L77 77L58 64L33 77L46 58Z"/>
+          <path d="M122 31L129 46L122 61L115 46ZM31 122L46 115L61 122L46 129ZM14 210L21 198L28 210L21 222ZM210 14L222 21L210 28L198 21Z"/>
+          <path d="M44 144V202M144 44H202M40 155L48 163L40 171M155 40L163 48L171 40"/>
+          <circle cx="96" cy="96" r="2"/><circle cx="105" cy="135" r="2"/><circle cx="135" cy="105" r="2"/>
+        </g>
+        <g id="startup-seal" fill="none" stroke="currentColor" stroke-width="1">
+          <circle r="52"/><circle r="43" stroke-dasharray="2 5"/><circle r="32"/><ellipse rx="18" ry="48"/>
+          <path d="M0-60V60M-60 0H60M0-39L28 0L0 39L-28 0ZM-37-37L37 37M37-37L-37 37"/>
+          <path class="startup-accent" d="M0-21L5-5L21 0L5 5L0 21L-5 5L-21 0L-5-5Z"/>
+        </g>
+      </defs>
+      <rect class="startup-outer-frame" x="42" y="38" width="1516" height="924" rx="22"/>
+      <use class="startup-corner" href="#startup-engraving" transform="translate(62 58)"/>
+      <use class="startup-corner" href="#startup-engraving" transform="translate(1538 58) scale(-1 1)"/>
+      <use class="startup-corner" href="#startup-engraving" transform="translate(62 942) scale(1 -1)"/>
+      <use class="startup-corner" href="#startup-engraving" transform="translate(1538 942) scale(-1 -1)"/>
+      <use class="startup-side-seal" href="#startup-seal" transform="translate(62 500)"/>
+      <use class="startup-side-seal" href="#startup-seal" transform="translate(1538 500)"/>
+      <g class="startup-border-lines" fill="none" stroke="currentColor">
+        <path d="M300 58H740M860 58H1300M340 66H710M890 66H1260M320 942H740M860 942H1280M62 300V420M62 580V700M1538 300V420M1538 580V700"/>
+        <path class="startup-accent" d="M800 32L820 58L800 84L780 58ZM800 922L820 942L800 962L780 942Z"/>
+        <circle cx="800" cy="58" r="11"/><circle cx="800" cy="942" r="8"/>
+      </g>
+    </svg>
+    <div class="startup-logo"><strong>诡秘之主</strong><span>LORD OF THE MYSTERIES</span></div>
+    <small class="startup-credit">诡秘之主 · 守秘人档案</small>
+    <div class="startup-loading">
+      <div id="startup-progress" role="progressbar" aria-label="开场进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="startup-fill"></i></div>
+      <p><b aria-hidden="true">»</b> LOADING – <span id="startup-percent">0%</span><em aria-hidden="true">......</em></p>
+    </div>
+  </section>
+  <noscript>请启用JavaScript后打开档案室。</noscript>
+  <script src="js/startup.js"></script>
+  <script src="js/music-host.js"></script>
+  <script src="data/bgm-envelope.js"></script>
+  <script src="js/bgm.js"></script>
+</body>
+</html>
